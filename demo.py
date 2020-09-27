@@ -2,7 +2,9 @@ import my_consumer
 import json
 import time
 import my_producer
-
+'''
+代码还可以进行一些优化，例如自己保存消费者的offset，防止数据丢失，在生产者那开启幂等性和事务保证数据不重复写入
+'''
 if __name__ == '__main__':
     # 消费者
     consumer = my_consumer.my_consumer('192.168.1.214', '9092', 'demo', 'group_demo')
